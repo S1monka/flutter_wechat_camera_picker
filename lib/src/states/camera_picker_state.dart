@@ -566,7 +566,7 @@ class CameraPickerState extends State<CameraPicker>
     if (controller.value.isTakingPicture || controller.value.isRecordingVideo) {
       return;
     }
-    ++currentCameraIndex;
+    currentCameraIndex = currentCameraIndex == 0 ? 1 : 0;
     if (currentCameraIndex == cameras.length) {
       currentCameraIndex = 0;
     }
